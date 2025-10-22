@@ -2,7 +2,10 @@ package com.max.AprendendoMicroServicesEspring.resources;
 
 import com.max.AprendendoMicroServicesEspring.entities.Worker;
 import com.max.AprendendoMicroServicesEspring.repository.WorkerRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,6 +17,12 @@ import java.util.List;
 @RestController
 @RequestMapping("/workers")
 public class WorkerResources {
+
+    private static Logger Logger = LoggerFactory.getLogger(WorkerResources.class);
+
+    @Autowired
+    Environment environment;
+
     @Autowired
     private WorkerRepository workerRepository;
 
@@ -26,6 +35,7 @@ public class WorkerResources {
     @GetMapping(value = "/{id}")
     public ResponseEntity<Worker> findById(@PathVariable Long id){
         Worker worker = workerRepository.findById(id).get();
+        Logger.info("PORTA: " + environment.getProperty("local.server.port"));
         return ResponseEntity.ok().body(worker);
     }
 }
