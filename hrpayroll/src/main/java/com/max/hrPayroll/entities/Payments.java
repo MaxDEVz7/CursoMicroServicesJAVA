@@ -1,4 +1,4 @@
-package com.max.hrPayroll.hrpayroll.entities;
+package com.max.hrPayroll.entities;
 
 import java.io.Serializable;
 

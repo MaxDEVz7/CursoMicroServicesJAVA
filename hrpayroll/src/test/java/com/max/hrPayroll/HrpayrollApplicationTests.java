@@ -1,4 +1,4 @@
-package com.max.hrPayroll.hrpayroll;
+package com.max.hrPayroll;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

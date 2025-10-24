@@ -1,6 +1,6 @@
-package com.max.hrPayroll.hrpayroll.feignClient;
+package com.max.hrPayroll.feignClient;
 
-import com.max.hrPayroll.hrpayroll.entities.Worker;
+import com.max.hrPayroll.entities.Worker;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;

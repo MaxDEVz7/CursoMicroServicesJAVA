@@ -1,8 +1,8 @@
-package com.max.hrPayroll.hrpayroll.resources;
+package com.max.hrPayroll.resources;
 
 
-import com.max.hrPayroll.hrpayroll.entities.Payments;
-import com.max.hrPayroll.hrpayroll.services.PaymentServices;
+import com.max.hrPayroll.entities.Payments;
+import com.max.hrPayroll.services.PaymentServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
